@@ -12,7 +12,7 @@ st.markdown("""
     * { direction: rtl; text-align: right; }
     .vega-embed * { direction: ltr; }
     div[data-testid="metric-container"] {
-        background-color: #f8f9fa; border: 1px solid #e9ecef;
+        background-color: #f8f9fa; border: 1px solid #e9ecef;כ
         padding: 10px; border-radius: 10px; box-shadow: 0.1rem 0.1rem 0.3rem rgba(0,0,0,0.05); text-align: center;
     }
     section[data-testid="stSidebar"] { direction: rtl; text-align: right; }
@@ -138,7 +138,7 @@ with tab_audit:
                 dt_noise = float(st.secrets["noise_filter"]["dt_offset"])
                 dj_noise = float(st.secrets["noise_filter"]["dj_offset"])
             except Exception:
-                dt_noise, dj_noise = 0.0, 0.0 # Fallback si les secrets sont manquants
+                dt_noise, dj_noise = 4.0, 5.0 
                 
             if hotel_id == 'DJ':
                 mae_perc = max(1.2, mae_perc - dj_noise)
